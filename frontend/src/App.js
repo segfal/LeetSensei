@@ -28,16 +28,19 @@ function App() {
     <div className={`App ${isSidebarOpen ? 'open' : ''}`}>
       <div className="sidebar">
         <h1>LeetSensei</h1>
-        <button onClick={toggleSidebar}>Toggle Menu</button>
+        <button onClick={toggleSidebar}> Open 
+        {/* &lt;&lt; */}
+         </button>
         <ul>
-          <li>Problems</li>
-          <li>Explore</li>
-          <li>Contests</li>
+          <h4 style={{paddingBottom:"20px"}}>Pseudocode:</h4>
+
+          <h4> Solution: </h4>
         </ul>
       </div>
       <main>
         {/* Content for your LeetCode app goes here */}
       </main>
+      
     </div>
   );
 }
