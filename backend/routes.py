@@ -1,30 +1,26 @@
+import openai
+from dotenv import load_dotenv
+load_dotenv()
 import os
-import google.auth
 
-import google.cloud.aiplatform as vertex_ai
-
-# import palm_api
+openai.api_key = os.getenv("TOKEN")
 
 
+def get_response(prompt, engine="davinci", max_tokens=150):
+    response = openai.Completion.create(
+        engine=engine,
+        prompt=prompt,
+        max_tokens=max_tokens,
+        temperature=0.9,
+        top_p=1,
+        frequency_penalty=0,
+        presence_penalty=0.6,
+        stop=["\n", " Human:", " AI:"]
+    )
+    return response["choices"][0]
 
-# Set the GOOGLE_APPLICATION_CREDENTIALS environment variable to the path of your service account key file.
-os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "creds.json"
 
-# Create a Vertex AI PaLM API endpoint.
-endpoint = vertex_ai.PaLMEndpoint.create(
-    project="my-project",
-    location="us-central1",
-    model="paLM-540B"
-)
 
-# Generate a text response from a prompt.
-response = endpoint.generate_text(
-    prompt="Write a poem about a cat",
-    temperature=0.5,
-    n=1
-)
 
-# Print the generated text completion.
-print(response.completions[0].text)
 
 
