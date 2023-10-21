@@ -1,6 +1,13 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "name": "LeetSensei",
+  "version": "1.0.0",
+  "description": "This is an extension to look up concerts coming to Toronto",
+  "manifest_version": 3,
+  "author": ["Mahmud Babu", "Nafisa Anzum", "Tashi Sherpa", "Hafeefa Sultan"],
+  "action": {
+    "default_popup": "index.html",
+    "default_title": "LeetSensei"
+  },
   "icons": [
     {
       "src": "favicon.ico",
