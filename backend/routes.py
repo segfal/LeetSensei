@@ -25,6 +25,7 @@ openai.api_key = data['TOKEN']
 
 # Get the generated text
 def msgresponse(message):
+    msg = f" explain the brute force and optimized solution to {message} in pseudocode"
     response = openai.ChatCompletion.create(
     model="gpt-4",
     messages=[{
@@ -38,7 +39,7 @@ def msgresponse(message):
 
 def coderesponse(message,lang):
     
-    msg = f" explain the solution to the following problem in"
+    msg = f" explain the brute force and optimized solution to {message} in {lang} programming language"
     
     response = openai.ChatCompletion.create(
     model="gpt-4",

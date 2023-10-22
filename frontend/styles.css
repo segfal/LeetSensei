@@ -1,3 +1,14 @@
+body{
+    width: auto;
+    height: auto;
+}
+
+.leetsensei{
+    width: 10em;
+    height: auto;
+    text-align: center;
+
+}
 .extension{
     display: flex;
     align-items: center;
@@ -29,7 +40,7 @@
     user-select: none;
     -webkit-user-select: none;
     touch-action: manipulation;
-    width: 10%;
+    width: 100%;
     will-change: transform;
 }
 

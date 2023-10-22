@@ -7,43 +7,25 @@
     <link rel="stylesheet" type="text/css" href="styles.css" />
   </head>
   <body>
-    <div>
-      <script src="script.js"></script>
-      <script>
-        chrome.tabs.query(
-          { active: true, currentWindow: true },
-          function (tabs) {
-            var currentURL = tabs[0].url;
-            console.log(currentURL);
-            if (currentURL.includes("leetcode.com")) {
-              var url = new URL(currentURL);
-              var pathname = url.pathname;
-              var parts = pathname.split("/");
-              var questionName = parts[parts.length - 2];
-              apiCall(questionName).then((data) => {
-                console.log(data);
-              });
-
-              console.log("Question Name: " + questionName);
-              apiCall(questionName);
-              console.log("Question Name: " + questionName);
-            } else console.log("This is not a leetcode website.");
-          }
-        );
-
-        function ClickHandler() {
-          console.log("Button Clicked");
-        }
-      </script>
+    <div class="leetsensei-container">
+      <h1>LeetSensei</h1>
       <div class="extension">
-        <h2>LeetSensei</h2>
         <button class="button-27" id="psuedocodebtn" role="button">
           Psuedocode
         </button>
         <button class="button-27" id="solutionbtn" role="button">
           Solution
         </button>
+        <button class="button-27" id="chatbtn" role="button">
+          Chat
+        </button>
       </div>
+      <div id="chat-container"></div>
+      <div id="psuedocode-container"></div>
+      <div id="solution-container"></div>
+      
     </div>
+
+    <script src="script.js"></script>
   </body>
 </html>
