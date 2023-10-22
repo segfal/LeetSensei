@@ -32,7 +32,7 @@ function App() {
         {/* &lt;&lt; */}
          </button>
         <ul>
-          <h4 style={{paddingBottom:"20px"}}>Pseudocode:</h4>
+          <h4 style={{}}>Pseudocode:</h4>
 
           <h4> Solution: </h4>
         </ul>
