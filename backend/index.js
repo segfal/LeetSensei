@@ -1,0 +1,1 @@
+const res = await fetch('127.0.0.1/api/hello');

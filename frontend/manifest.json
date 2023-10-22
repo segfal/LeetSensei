@@ -1,0 +1,15 @@
+{
+    "name": "LeetSensei",
+    "version": "1.0.0",
+    "description": "LeetSensei is an extension to help you with leetcode!",
+    "manifest_version": 3,
+    "author":"LeetSensei",
+    "action": {
+        "default_popup": "index.html",
+        "default_title": "LeetSensei"
+    },
+    "permissions": [
+        "activeTab"
+       
+    ]
+}

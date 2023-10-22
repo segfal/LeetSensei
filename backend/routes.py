@@ -3,6 +3,7 @@ import openai
 import os
 from flask import Flask, render_template, request, redirect, url_for, flash, session
 import json 
+from flask_cors import CORS
 
 #json credentials
 
@@ -51,6 +52,7 @@ def coderesponse(message,lang):
 
 
 app = Flask(__name__)
+CORS(app)
 
 @app.route('/')
 def index():
@@ -65,6 +67,14 @@ def chat(message):
 127.0.0.1:5000/chat/Hello
 
 '''
+
+
+@app.route('/code/<message>/<lang>', methods=['GET'])
+def code(message,lang):
+    return coderesponse(message,lang)
+
+
+
 
 
 
