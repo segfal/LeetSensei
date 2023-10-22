@@ -35,6 +35,20 @@ def msgresponse(message):
     return {"msg":msg}
 
 
+def coderesponse(message,lang):
+    
+    msg = f" explain the solution to the following problem in"
+    
+    response = openai.ChatCompletion.create(
+    model="gpt-4",
+    messages=[{
+        "role": "user",
+        "content": message
+    }],
+    )
+    msg = response["choices"][0]["message"]["content"]
+    return {"msg":msg}
+
 
 app = Flask(__name__)
 
@@ -51,6 +65,10 @@ def chat(message):
 127.0.0.1:5000/chat/Hello
 
 '''
+
+
+
+
 
 
 if __name__ == '__main__':
