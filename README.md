@@ -45,6 +45,16 @@ LeetSensei addresses a common issue faced by LeetCode users. When seeking help o
 
 LeetSensei was created to provide a solution that encourages users to learn, grow, and understand the problem-solving process, making it a valuable resource for anyone looking to improve their coding skills and tackle LeetCode problems effectively.
 
+## Design Mockup
+
+We've created a visual representation of how LeetSensei was supposed to look like. Though this is not exactly how it was supposed to appear, this is the raw visualization of the project.
+
+![Design Mockup](<img width="772" alt="Screenshot 2023-10-23 175859" src="https://github.com/segfal/LeetSensei/assets/99234946/17c8c877-8d5e-4509-a5cd-ed2bdb1a67f8">)
+![Design Mockup] (<img width="767" alt="Screenshot 2023-10-23 180009" src="https://github.com/segfal/LeetSensei/assets/99234946/e9b14d89-8fea-49dc-a035-2c379816d5ce">)
+
+This Figma design represents the intended user interface and layout of our extension.
+
+
 ## Getting Started
 
 To get started with LeetSensei, follow these steps:
