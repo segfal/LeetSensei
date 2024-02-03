@@ -3,7 +3,7 @@
 LeetSensei is a browser extension developed during the HackHarvard 2023 hackathon by a team of talented developers, including:
 
 - Hafeefa Sultan
-- Mahamud Babu
+- Segfal
 - Nafisa Anzum
 - Tashi Sherpa
 
